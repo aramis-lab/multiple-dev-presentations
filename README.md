@@ -4,9 +4,9 @@ To build a series of HTML presentation from Markdown files, like [this one](http
 
 If you only have a single presentation to build, prefer [this template](https://github.com/aramis-lab/dev-presentation).
 
-This repo was generated with the tool [Slidev](https://sli.dev/).
+This repo was generated with the tool [Slidev](https://sli.dev/). Have a look at [this](https://aramislab.fr/dev-presentation) to see what Slidev can do!
 
-To create your own presentation, [create a GitHub repository in the ARAMIS Lab organization](https://github.com/organizations/aramis-lab/repositories/new), select this repository as a template, and follow these instructions:
+To create your own presentations, [create a GitHub repository in the ARAMIS Lab organization](https://github.com/organizations/aramis-lab/repositories/new), select this repository as a template, and follow these instructions:
 
 ## Setup
 
@@ -37,7 +37,7 @@ npm -v # must return 11.19.0
 npm install
 ```
 
-## To start the slide show
+## Start the slide show
 
 To open one of your presentation, run:
 
@@ -47,7 +47,7 @@ npm run dev <x-presentation.md> # for example npm run dev 1-example.md
 
 You can modify the corresponding markdown and view the changes live.
 
-## To build the website
+## Build the website
 
 To build the entire website with all your presentations, run:
 
@@ -57,7 +57,7 @@ npm run site
 
 Then, open `http://localhost:3000/<your-repo>/`.
 
-## To add a new presentation
+## Add a new presentation
 
 Create a markdown file at the root of the project. The name of the file **must start with a number**.
 
@@ -73,7 +73,7 @@ Then, modify `index.html`, which is the homepage, by adding a reference to your 
 > [!NOTE]
 > Here, the markdown is named `2-new-presentation.md`.
 
-## To deploy your presentations online
+## Deploy your presentations online
 
 If you want to deploy the series of presentations online, for example to share them, do the following steps:
 
