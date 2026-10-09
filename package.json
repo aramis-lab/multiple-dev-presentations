@@ -1,0 +1,20 @@
+{
+  "name": "multiple-dev-presentations",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "build:site": "P=${SITE_PREFIX:-multiple-dev-presentations}; rm -rf public & for f in [0-9]*.md; do n=$(basename \"$f\" .md); npm run build -- \"$f\" --base \"/$P/$n/\" --out \"public/$n\" || exit 1; done && cp -R index.html images public/",
+    "preview:site": "P=${SITE_PREFIX:-multiple-dev-presentations}; mkdir -p /tmp/$P-preview && ln -sfn \"$PWD/public\" /tmp/$P-preview/$P && echo \"Open http://localhost:3000/$P/\" && npx serve /tmp/$P-preview --symlinks",
+    "site": "npm run build:site && npm run preview:site",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.18.0",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "slidev-theme-frankfurt": "^1.1.0",
+    "vue": "^3.5.33"
+  }
+}
